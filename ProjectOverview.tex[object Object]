@@ -1,0 +1,96 @@
+\documentclass{article}
+
+\title{Math 480 Final Project}
+\author{Jessica Junk}
+
+\begin{document}
+\maketitle
+
+\section{Project Overview}
+
+\subsection{Group Members}
+
+I am working in a group with Dwight Hohnstein and Tanor Missler.
+
+\subsection{Project in Brief}
+
+Our project is to clean up the documentation for the modules under sage/logic and add it to the reference manual. The related Sage trac tickets are:
+
+\begin{itemize}
+\item \#8790 - logic/logic.py
+\item \#8793 - logic/boolformula.py
+\item \#8794 - logic/logicparser.py
+\item \#8795 - logic/logictable.py
+\end{itemize}
+
+\section{Trac Tickets Expounded}
+
+\subsection{Trac \#8790} \label{8790}
+\begin{itemize}
+\item improve doctest coverage of logic/logic.py
+\begin{itemize}
+\item Missing documentation
+\begin{itemize}
+\item combine(self, statement1, statement2):
+\item simplify(self, table):
+\item prove(self, statement):
+\end{itemize}
+\item Missing doctests
+\begin{itemize}
+\item get\_bit(x, c):
+\item eval(toks):
+\item eval\_ltor\_toks(lrtoks):
+\item reduce\_bins(lrtoks):
+\item reduce\_monos(lrtoks):
+\item eval\_mon\_op(args):
+\item eval\_bin\_op(args):
+\item eval\_and\_op(lval, rval):
+\item eval\_or\_op(lval, rval):
+\item eval\_ifthen\_op(lval, rval):
+\item eval\_iff\_op(lval, rval):
+\item tokenize(s, toks):
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+\subsection{Trac \#8793} \label{8793}
+\begin{itemize}
+\item clean up documentation of logic/boolformula.py
+\end{itemize}
+
+\subsection{Trac \#8794} \label{8794}
+\begin{itemize}
+\item clean up documentation of logic/logicparser.py
+\end{itemize}
+
+\subsection{Trac \#8795} \label{8795}
+\begin{itemize}
+\item clean up documentation of logic/logictable.py
+\end{itemize}
+
+
+\subsection{Summary}
+So basically, what our final project comes down to is as follows: Section \ref{8790} will add in doctests. Sections \ref{8793} - \ref{8795} will change the documentation to the required Sphinx format. From here, we will add our fixes to the reference manual.
+
+\section{And now for something completely different\dots}
+\label{sec:math}
+
+Given that our final project does not really use much math, and therefore any mathematical formulas, and since this homework assignment calls for at least one math formula, section \ref{sec:math} will be devoted to fulfilling this requirement.
+
+I will solve a simple problem requiring Integration by Parts.
+
+\vspace{.1 in}
+Problem: Solve $\int_0^1 x\sin(\pi x) \mathrm{d}x$.
+\vspace{.1 in}
+
+Using integration by parts: $\int u  \mathrm{d} v = uv - \int v \mathrm{d}u$.
+
+Let $u = x$, d$v = \sin(\pi x) \mathrm{d}x$, d$u = 1 \mathrm{d}x$, and $v = -\frac{1}{\pi} \cos(\pi x)$ to get:
+
+$$x \left(-\frac{1}{\pi} \cos(\pi x) \right)
+   - \int_0^1 \left(-\frac{1}{\pi} \cos(\pi x) \right) \mathrm{d}x$$
+$$= \left[x \left(-\frac{1}{\pi} \cos(\pi x) \right)
+   + \frac{1}{\pi} \left(\frac{1}{\pi} \sin(\pi x) \right) \right]_0^1$$
+$$= \left[\frac{1}{\pi}\right] - \left[0\right] = \frac{1}{\pi}$$
+
+\end{document}
